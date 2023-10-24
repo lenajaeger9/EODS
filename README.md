@@ -1,13 +1,16 @@
 # EODS
-Earth Observation Data for Svalbard
+🛰️ Earth Observation Data for Svalbard 🛰️
 
-# Introduction
+# Introduction 
 
 # Projects 
 
+## Data visualization
+
 ## Google Earth Engine WebApp for data download
+
 
 ## Snowmelt onset map product
 
-
+# 
 
