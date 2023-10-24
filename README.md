@@ -6,7 +6,13 @@
 # Projects 
 
 ## Data visualization
-https://github.com/lenajaeger9/EODS/blob/3cc49abb2a72a7eeb18021843b47f770e0eb15be/figures/2019-NDSI.mp4
+https://github.com/lenajaeger9/EODS/assets/116868780/94269c02-36b2-464b-87a3-1c74cee843d0 
+
+https://github.com/lenajaeger9/EODS/assets/116868780/c0ab5f0f-e5de-442b-9039-37e88489963a
+
+
+
+
 
 
 ## Google Earth Engine WebApp for data download
