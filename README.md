@@ -6,7 +6,7 @@
 # Projects 
 
 ## Data visualization
-<img src = "figures/2019-NDSI.mp4" alt = "NDSI 2019 animated visualization">
+https://github.com/lenajaeger9/EODS/blob/main/figures/2019-NDSI.mp4
 
 ## Google Earth Engine WebApp for data download
 
