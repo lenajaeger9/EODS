@@ -13,7 +13,7 @@
 
 ### Data visualization
 <img src ="https://github.com/lenajaeger9/EODS/blob/ceae641bc3b47d29a05bd40e0f9b7d1cc46fc3f8/figures/RS_visual%202.jpg">
-https://github.com/lenajaeger9/EODS/assets/116868780/94269c02-36b2-464b-87a3-1c74cee843d0 
+
 
 
 
