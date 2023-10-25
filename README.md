@@ -1,5 +1,5 @@
 <h1 align="center"> EODS️</h1>
-<h1 align="center"> 🛰️ Earth Observation Data for Svalbard 🛰️</h1>
+<h2 align="center"> 🛰️ Earth Observation Data for Svalbard 🛰️</h2>
 
 <p align="center">
 <img src = "https://github.com/lenajaeger9/EODS/blob/3c2334b9ad7d68090c21676b42e5051c4e50e86c/figures/intro.JPG" alt ="Introduction">
