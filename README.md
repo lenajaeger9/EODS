@@ -23,7 +23,7 @@ https://github.com/lenajaeger9/EODS/assets/116868780/c0ab5f0f-e5de-442b-9039-37e
 <img src = "https://github.com/lenajaeger9/EODS/blob/ceae641bc3b47d29a05bd40e0f9b7d1cc46fc3f8/figures/vegetation2.JPG">
 
 ## Snowmelt onset map product
-<img src ="https://github.com/lenajaeger9/EODS/blob/ceae641bc3b47d29a05bd40e0f9b7d1cc46fc3f8/figures/snow2.JPG"> 
+<img src ="https://github.com/lenajaeger9/EODS/blob/ceae641bc3b47d29a05bd40e0f9b7d1cc46fc3f8/figures/snow3.JPG"> 
 
 # Notes
 
