@@ -1,4 +1,4 @@
-# EODS
+<h1 align="center"> EODS️</h1>
 <h1 align="center"> 🛰️ Earth Observation Data for Svalbard 🛰️</h1>
 
 <p align="center">
