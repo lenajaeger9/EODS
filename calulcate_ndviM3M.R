@@ -1,7 +1,9 @@
+
 ## script to automatically calculate NDVI for all rasters in the ortho_path and exporting into ndvi_path
 ## note that this script is made for M3M data; if other sensor; needs adapting band names etc
 ## if alpha channel is saved during processing, the script deletes this band
 
+## Script by Lena Jäger (University of Würzburg), 28.01.2024
 library(terra)
 
 # Functions provided via GitHub (https://github.com/lenajaeger9/EODS)
