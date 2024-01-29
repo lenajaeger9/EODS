@@ -6,6 +6,9 @@
 </p>
 
 ## Introduction
+This page is dedicated to document the work of Janik Hoffmann and Lena Jäger during their time at the University Centre in Svalbard (UNIS).
+The overall objective is to make remote sensing data accessible and first products accessible and easy to use,
+in a transparent way and across all disciplines.
 
 ## Background 
 
