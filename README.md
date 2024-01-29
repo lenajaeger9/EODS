@@ -17,6 +17,16 @@ in a transparent way and across all disciplines.
 ### Data visualization
 <img src ="https://github.com/lenajaeger9/EODS/blob/ceae641bc3b47d29a05bd40e0f9b7d1cc46fc3f8/figures/RS_visual%202.jpg">
 
+In terms of data visualization, a Google Earth Engine (GEE) script was developed to show animations. 
+It is easily adaptable to other regions, by changing the aoi in the beginning.
+In the upper left corner is the option to draw a geometry directly in the map. The newly created Geometry import can be named and simply typed out as the aoi (line 14).
+It visualizes Sentinel 2 data and important indices, namely NDVI, NDSI, NDWI and NDMI. 
+The time (year and months), as well as the cloud cover can be set in line 86 to 93. 
+By visualizing remote sensing data via animation, difficulties for satellite remote sensing become quite prominent, as well as the potential.
+It can be clearly observed, that cloud cover is quite frequent. But still, when animating a whole season, the pattern of greening and start of snow cover can be detected. 
+An animation example is illustrated below.
+
+[<img src="figures/2023-NDVI.mp4">]
 
 
 
