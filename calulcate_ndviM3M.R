@@ -1,52 +1,43 @@
 
-## script to automatically calculate NDVI for all rasters in the ortho_path and exporting into ndvi_path
-## note that this script is made for M3M data; if other sensor; needs adapting band names etc
-## if alpha channel is saved during processing, the script deletes this band
+## script to calculates NDVI for all rasters in the ortho_path and exporting into target_path
+## note that this script is made for M3M data that is co-registered. 
 
-## Script by Lena Jäger (University of Würzburg), 28.01.2024
 library(terra)
 
 # Functions provided via GitHub (https://github.com/lenajaeger9/EODS)
 source("/Users/lenajaeger/Documents/Semester1/GlacialLakeAnalysis/Functions.R") 
 
-# ⚠️ set paths (adapt)
-# ortho path containing all Multispectral Orthomosaics
-ortho_path <- "/Users/lenajaeger/Documents/SenescencePaper/data/Luz/Ortho"
-ndvi_path <- "/Users/lenajaeger/Documents/SenescencePaper/data/Luz/NDVI"
+#alternatively:
+fun_ndvi <- function(nir, red){
+  return((nir - red) / (nir + red))
+}
 
-bands_M3M <- c("green", "red", "RedEdge", "nir")
+# ⚠️ set paths (adapt)
+# ortho path containing all multispectral orthomosaics: 
+ortho_path <- "/Users/lenajaeger/Documents/SenescencePaper/data/Luz/stacks/"
+# path where ndvi files should be saved (target path): 
+target_path <- "/Users/lenajaeger/Documents/SenescencePaper/data/Luz/NDVI/"
+
+# bands from Co-Registered stacks: R, G, B, RED MS, NIR MS 
+bands <- c("R","G", "B", "RED_MS", "NIR_MS") 
 
 # Get a list of all files in the folder
 tif_files <- list.files(path = ortho_path, pattern = ".tif", full.names = TRUE)
 
-
 # loop through files to calculate and export NDVI
 for (file in tif_files) {
   cat("Processing raster:", substring(file, nchar(file) - 30), "\n")
-  
   # Extract the original filename (without extension)
   file_basename <- tools::file_path_sans_ext(basename(file))
   # output filename
   ndvi_filename <- paste0(file_basename, "_NDVI.tif")
-  
-  raster_stack <- rast(file)
-  
-  # Check the number of bands and delete alpha channel if present
-  num_bands <- nlyr(raster_stack)
-  cat("Number of Bands:", num_bands, "\n")
-  
-  if (num_bands == 5) {
-    raster_stack <- raster_stack[[1:4]]
-    cat("Removed the last band\n")
-  }
-  
-  names(raster_stack) <- bands_M3M
-  
+  # load raster
+  raster <- rast(file)
+  # rename bands
+  names(raster) <- bands
   # Calculate NDVI using the custom function
-  ndvi <- fun_ndvi(raster_stack$nir, raster_stack$red)
-  
+  ndvi <- fun_ndvi(nir = raster$NIR_MS, red = raster$RED_MS)
   # Write NDVI raster to the output directory
-  writeRaster(ndvi, file.path(ndvi_path, ndvi_filename), overwrite = T)
-  cat("NDVI raster written to:", file.path(ndvi_path, ndvi_filename), "\n\n")
+  writeRaster(ndvi, file.path(target_path, ndvi_filename), overwrite = T)
+  cat("NDVI raster written to:", file.path(target_path, ndvi_filename), "\n\n")
 }
-
